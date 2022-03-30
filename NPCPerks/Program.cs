@@ -11,37 +11,35 @@ namespace NPCPerks
             int pickLockPerk = (int)NPCCaracteristics.Picklock;
             int luckPerk = (int)NPCCaracteristics.Luck;
 
+            int x,y;
+            int[][] NPCs;
+            
+            
+            Console.WriteLine("Insert Number of NPCs you want");
             int inputtedNumberOfNPCs = int.Parse(Console.ReadLine());
-
-            int[] NPCs = new int[inputtedNumberOfNPCs];
-            int[] npcCaracteristics = new int[inputtedNumberOfNPCs];
-            foreach (int a in NPCs)
+            x = inputtedNumberOfNPCs;
+            
+            NPCs = new int[x][];
+            
+            for( int i = 0; i<NPCs.Length;i++)
             {
-                int inputtedCaracteristic = int.Parse((Console.ReadLine()));
-                npcCaracteristics[a] = inputtedCaracteristic;
-                Console.WriteLine(npcCaracteristics[a]);
-                switch (inputtedCaracteristic)
+                Console.WriteLine("Insert Number of Perks you want in the NPC");
+                int numberOfCaracteristics = int.Parse(Console.ReadLine());
+                y = numberOfCaracteristics;
+                NPCs[i] = new int[y];
+                for(int j = 0; j<NPCs[i].Length;j++)
                 {
-                    case 0:
-                        Console.WriteLine(stealthPerk);
-                        break;
-                    case 1:
-                        Console.WriteLine(combatPerk);
-                        break;
-                    case 2:
-                        Console.WriteLine(pickLockPerk);
-                        break;
-                    case 3:
-                        Console.WriteLine(luckPerk);
-                        break;
-
-                    default:
-                        Console.WriteLine("Invalid");
-                        break;
+                    Console.WriteLine("What Perk You Want: ");
+                    int caracteristicIDNumber = int.Parse(Console.ReadLine());
+                    NPCs[i][j] = caracteristicIDNumber;
+                    
+                    Console.WriteLine(NPCs[i][j]);
                 }
-
+                
+                
+                
             }
-
+            
 
 
         }
