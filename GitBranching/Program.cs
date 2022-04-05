@@ -7,8 +7,8 @@ namespace GitBranching
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-            Console.WriteLine("Hello Again!");
-            Console.WriteLine("Hello Again!");
+            Console.WriteLine("Bye!");
+            
         }
     }
 }
